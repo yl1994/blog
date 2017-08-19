@@ -32,6 +32,8 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 # biding.pry
 gem 'pry-rails', '0.3.2'
+#敲@显示下拉
+gem 'jquery-atwho-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'
