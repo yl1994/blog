@@ -26,11 +26,21 @@
     </ul>
   </div>
 </div>
+<% if flash.notice %>
+  <div class="notice"><%= flash.notice %></div>
+<% end %>
 <%= yield %>
 <div class="footer">
   <div class="container">
     footer
   </div>
 </div>
+<script>
+  $('.home-banner').anystretch();
+    var hideNotice = function(){
+        $(".notice").fadeOut("slow");
+    }
+    setTimeout(hideNotice, 4000);
+</script>
 </body>
 </html>
