@@ -11,6 +11,6 @@
               <%= time_ago_in_words c.created_at %> 前
             </span>
          </div>
-         <%= c.content %>
+         <%= markdown(c.content) %>
        </div>
     </div>

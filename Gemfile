@@ -34,6 +34,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails', '0.3.2'
 #敲@显示下拉
 gem 'jquery-atwho-rails'
+# Markdown 格式
+gem 'redcarpet'
+
+#用 pygment 实现代码高亮
+gem 'pygments.rb'
 
 # Use unicorn as the app server
 # gem 'unicorn'
