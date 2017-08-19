@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #issues
   resources :issues
   # comments
-  post '/issues/:issue_id/comments' => "comments#create"
+  resources :comments, only: [:create]
   get "signup" => "users#signup", :as => "signup"
   get "login" => "users#login", :as => "login"
   post "create_login_session" => "users#create_login_session"
