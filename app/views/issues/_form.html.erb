@@ -9,6 +9,8 @@
         <dt><%= f.label :content %></dt>
         <dd><%= f.text_area :content %></dd>
       </dl>
+      <!--hidden field-->
+      <%=f.hidden_field :user_id %>
       <p><%= f.submit  :class => "submit-issue-button btn btn-primary" %></p>
     <% end %>
   </div>

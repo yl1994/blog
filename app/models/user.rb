@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   validates :name, :email, presence: true
   validates :name, :email, uniqueness: { case_sensitive: false }
   has_many :comments
+  has_many :issues
 
   before_create { generate_token(:auth_token) }
 
