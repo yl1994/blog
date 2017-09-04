@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: blog
-  username: blog
+  username: root
   password:  123456
