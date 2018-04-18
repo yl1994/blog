@@ -12,6 +12,7 @@ nbproject/*
 repe*
 solr/*
 config/*.yml
+public/*
 
 
 
