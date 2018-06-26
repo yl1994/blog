@@ -13,6 +13,7 @@ repe*
 solr/*
 config/*.yml
 public/*
+!public/vender
 
 
 
