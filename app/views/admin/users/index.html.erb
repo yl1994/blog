@@ -1,0 +1,44 @@
+<%= legend_name("用户管理")%>
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">用户列表</h3>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <%= link_to "新增用户", new_admin_user_path(back: request.fullpath) ,class: "btn btn-primary" %>
+          <table class="table table-bordered table-striped dataTable mt10">
+            <thead>
+            <tr>
+              <th>序号</th>
+              <th>用户ID</th>
+              <th>登录名</th>
+              <th>邮箱</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @users.each_with_index do |user,index| %>
+              <tr>
+                <td><%= index+ 1 %></td>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email%></td>
+                <td class="w100">
+                  <%= link_to "修改",edit_admin_user_path(user,back: request.fullpath),class: "btn btn-primary"%>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <%= paginate @users %>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+  </div>
+</section>
+
+

@@ -39,6 +39,9 @@ gem 'redcarpet'
 
 #用 pygment 实现代码高亮
 gem 'pygments.rb'
+gem 'simple_form', '3.0.2'
+# 分页
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 # Use unicorn as the app server
 # gem 'unicorn'

@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'page#welcome'
   get '/about' => 'page#about'
-
+  
+  namespace :admin do
+    root 'home#index'
+    resources :users
+  end
   #issues
   resources :issues
   # comments

@@ -1,0 +1,33 @@
+<%= simple_form_for [:admin, @user] do |f| %>
+  <section class="content">
+
+    <!-- SELECT2 EXAMPLE -->
+    <div class="box box-default">
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>用户名：</label>
+              <%=  f.text_field :name, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <label>密码：</label>
+              <%= f.password_field :password, class: "form-control " %>
+            </div>
+
+            <div class="form-group">
+              <label>邮箱：</label>
+              <%= f.text_field :email, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <%= render "/admin/shared/form_buttons",f: f %>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </section>
+<% end %>

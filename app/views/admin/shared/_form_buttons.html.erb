@@ -1,0 +1,11 @@
+<% html ||= "" %>
+<% btn_label ||= nil %>
+<% confirm ||=nil%>
+<% data = {:disable_with =>"提交中..."} %>
+<% data.merge!(:confirm => confirm ) if confirm %>
+<div class="box-footer">
+  <%= hidden_field_tag 'back', params[:back] %>
+  <%= f.button (btn_label || :submit), data: data, :class => "btn btn-success" if f.present? %>
+  <%= link_to "返回", params[:back], class: 'btn btn-primary' if params[:back].present? %>
+  <%= html.html_safe %>
+</div>

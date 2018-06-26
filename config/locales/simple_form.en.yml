@@ -1,0 +1,20 @@
+zh-CN:
+  simple_form:
+    required:
+      text: '必填'
+      mark: '*'
+      html: "<span class='required-mark'>*</span>"
+    labels:
+      user:
+        name: 用户名
+        email: 邮箱
+        password: 密码
+        password_confirmation: 确认密码
+    hints:
+  helpers:
+    select:
+      prompt: 请选择
+    submit:
+      create: 创建
+      update: 更新
+      submit: 保存
