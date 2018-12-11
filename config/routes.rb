@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   
   namespace :admin do
     root 'home#index'
+    # 用户管理
     resources :users
+    # 角色管理
+    resources :roles
   end
   #issues
   resources :issues

@@ -1,0 +1,28 @@
+<%= simple_form_for [:admin, @role] do |f| %>
+  <section class="content">
+
+    <!-- SELECT2 EXAMPLE -->
+    <div class="box box-default">
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>名称：</label>
+              <%=  f.text_field :name, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <label>描述：</label>
+              <%= f.text_area :desc, class: "form-control " %>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <%= render "/admin/shared/form_buttons",f: f %>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </section>
+<% end %>

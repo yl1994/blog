@@ -37,11 +37,12 @@ class Admin::UsersController < Admin::HghlandController
   end
 
   def destroy
-
+    @user.destroy ? flash_msg(:success,"已成功删除") :  flash_msg(:error,"删除失败#{@user.error_msg}")
+    redirect_to params[:back]
   end
 
   private
     def user_params
-      params.require(:user).permit(:name, :password, :email)
+      params.require(:user).permit(:name, :password, :email,role_ids: [])
   end
 end

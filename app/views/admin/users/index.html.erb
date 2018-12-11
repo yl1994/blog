@@ -25,8 +25,18 @@
                 <td><%= user.id %></td>
                 <td><%= user.name %></td>
                 <td><%= user.email%></td>
-                <td class="w100">
-                  <%= link_to "修改",edit_admin_user_path(user,back: request.fullpath),class: "btn btn-primary"%>
+                <td class="w120">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-info">操作</button>
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><%= link_to "修改",edit_admin_user_path(user,back: request.fullpath)%></li>
+                      <li><%= link_to "删除",admin_user_path(user,back: request.fullpath) , :method => :delete, data: { confirm: '确定要刪除吗?' } %></li>
+                    </ul>
+                  </div>
                 </td>
               </tr>
             <% end %>

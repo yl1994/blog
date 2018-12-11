@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   validates :name, :email, uniqueness: { case_sensitive: false }
   has_many :comments
   has_many :issues
-
+  has_many :user_roles, :dependent => :destroy
+  has_many :roles, :through => :user_roles
   before_create { generate_token(:auth_token) }
 
   def avatar
