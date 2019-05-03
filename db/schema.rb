@@ -30,15 +30,15 @@ ActiveRecord::Schema.define(version: 20180626145903) do
   end
 
   create_table "roles", force: true do |t|
-    t.string   "name",       comment: "角色名称"
-    t.text     "desc",       comment: "角色描述"
+    t.string   "name"
+    t.text     "desc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "user_roles", force: true do |t|
-    t.integer  "user_id",    comment: "用户id"
-    t.integer  "role_id",    comment: "角色id"
+    t.integer  "user_id"
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
