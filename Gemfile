@@ -29,6 +29,22 @@ gem 'font-awesome-rails'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+group :development do
+    # ...
+
+  # 其中`capistrano-rails`包含了以下三个插件。
+  # gem 'capistrano/bundler'
+  # gem 'capistrano/rails/assets'
+  # gem 'capistrano/rails/migrations'
+  # 你也可以分别一个个加进去，但是何必呢？这些基本都是`rails`部署必须的。
+  # 直接用`gem 'capistrano-rails'`这一个就好了。
+  gem 'capistrano-rails', '~> 1.4'
+
+  # 对`passenger`与`rbenv`的支持
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rvm', '~> 0.1.2'
+end
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # biding.pry
