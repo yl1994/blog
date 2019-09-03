@@ -12,8 +12,7 @@ nbproject/*
 repe*
 solr/*
 config/*.yml
-public/*
-!public/vender
+public/uploads/*
 
 
 

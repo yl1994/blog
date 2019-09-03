@@ -1,0 +1,1 @@
+define({  "name": "智慧工地API",  "version": "1.0.0",  "description": "",  "title": "智慧工地API",  "url": "localhost:3000",  "sampleUrl": "http://localhost:3000",  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2019-09-03T07:11:34.312Z",    "url": "http://apidocjs.com",    "version": "0.17.7"  }});
