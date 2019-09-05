@@ -13,10 +13,11 @@
   </div>
 </div>
 
-
-<div class="container clearfix">
-  <%=render "issue_list", issues: @issues%>
-</div>
+<% if @issues.present? %>
+  <div class="container clearfix">
+    <%=render "issue_list", issues: @issues%>
+  </div>
+<% end %>
 <script type="text/javascript">
     $(".home-banner").anystretch();
 </script>

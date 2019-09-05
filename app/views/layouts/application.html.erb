@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
   <title>meetup</title>
   <%= stylesheet_link_tag "application"%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tag %>
 </head>
+<style type="text/css">
+  pre {
+    font-size: 8pt;
+    letter-spacing: 4px;
+    line-height: 8pt;
+    font-weight: bold;
+}
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+</style>
 <body class="<%= params[:controller]+'-'+params[:action] %>">
 <div class="navbar clearfix">
   <div class="container">
@@ -32,7 +45,7 @@
 <%= yield %>
 <div class="footer">
   <div class="container">
-    footer
+    <%= render 'shared/image_to_text'%>
   </div>
 </div>
 <script>
@@ -41,6 +54,10 @@
         $(".notice").fadeOut("slow");
     }
     setTimeout(hideNotice, 4000);
+    $(function() {
+      // 纯文字
+      $().figlet("Meetup");
+    });
 </script>
 </body>
 </html>

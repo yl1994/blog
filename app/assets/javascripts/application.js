@@ -16,4 +16,6 @@
 //= require turbolinks
 //= require jquery.atwho
 //= require vendor/jquery.hotkeys
+//= require vendor/figlet/figlet.js
+//= require vendor/figlet/jquery.figlet.js
 //= require_tree .
