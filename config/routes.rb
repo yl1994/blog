@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'page#welcome'
   get '/about' => 'page#about'
+  get '/get_bing_images' => 'page#get_bing_images'
   
   namespace :admin do
     root 'home#index'
