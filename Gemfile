@@ -58,7 +58,7 @@ gem 'redcarpet'
 gem 'pygments.rb'
 gem 'simple_form', '3.0.2'
 # 分页
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.2'
 # 跨域
 gem 'rack-cors', :require => 'rack/cors'
 
